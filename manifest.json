@@ -1,0 +1,10 @@
+{
+  "domain": "centauri_carbon",
+  "name": "Elegoo Centauri Carbon",
+  "version": "0.1.0",
+  "documentation": "",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": [],
+  "config_flow": true
+}
