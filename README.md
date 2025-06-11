@@ -18,3 +18,4 @@ Fan Speed - Auxilliary
 Fan Speed - Enclosure
 
 I will be adding controls as well in the near future.
+<img width="287" alt="image" src="https://github.com/user-attachments/assets/eabdc031-9fe0-45ca-be97-1c4580737bf1" />
