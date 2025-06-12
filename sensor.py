@@ -6,23 +6,25 @@ from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from .const import DOMAIN
 
-SCAN_INTERVAL = timedelta(seconds=10)
+SCAN_INTERVAL = timedelta(seconds=1)
 
 SENSOR_TYPES = {
     "nozzle_temp": ["Temperature - Nozzle", "°C"],
     "bed_temp": ["Temperature - Bed", "°C"],
     "enclosure_temp": ["Temperature - Enclosure", "°C"],
-    "progress": ["Print Progress", "%"],
-    "target_bed_temp": ["Temperature Target - Bed", "°C"],
-    "target_nozzle_temp": ["Temperature Target - Nozzle", "°C"],
+#    "target_bed_temp": ["Temperature Target - Bed", "°C"],
+#    "target_nozzle_temp": ["Temperature Target - Nozzle", "°C"],
     "z_offset": ["Z Offset", "mm"],
     "model_fan_speed": ["Fan Speed - Model", "%"],
     "aux_fan_speed": ["Fan Speed - Auxilliary", "%"],
-    "box_fan_speed": ["Fan Speed - Box", "%"],
+    "box_fan_speed": ["Fan Speed - Enclosure", "%"],
+    "progress": ["Print Progress", "%"],
     "print_status": ["Print Status", None],
     "current_layer": ["Current Layer", None],
     "total_layers": ["Total Layers", None],
-    "print_speed_pct": ["Print Speed %", "%"],
+    "print_speed_pct": ["Print Speed", "%"],
+    "elapsed_time": ["Elapsed Print Time", None],
+    "remaining_time": ["Remaining Print Time", None],
 }
 
 STATUS_ICONS = {
@@ -43,16 +45,19 @@ SENSOR_ICONS = {
     "nozzle_temp": "mdi:thermometer",
     "bed_temp": "mdi:thermometer",
     "enclosure_temp": "mdi:home-thermometer",
-    "progress": "mdi:progress-clock",
     "target_bed_temp": "mdi:thermometer-lines",
     "target_nozzle_temp": "mdi:thermometer-lines",
     "z_offset": "mdi:arrow-expand-vertical",
     "model_fan_speed": "mdi:fan",
     "aux_fan_speed": "mdi:fan",
     "box_fan_speed": "mdi:fan",
+    "progress": "mdi:progress-clock",
+    "print_status": "mdi:printer-3d",
     "current_layer": "mdi:layers",
     "total_layers": "mdi:layers-outline",
     "print_speed_pct": "mdi:speedometer",
+    "elapsed_time": "mdi:timer-sand",
+    "remaining_time": "mdi:timer-sand-complete",
 }
 
 async def async_setup_entry(
@@ -91,11 +96,7 @@ class CentauriSensor(SensorEntity):
     def icon(self):
         if self._key == "print_status":
             return STATUS_ICONS.get(self.native_value, "mdi:printer-alert")
-        return SENSOR_ICONS.get(self._key, None)
-
-    @property
-    def state_class(self):
-        return None
+        return SENSOR_ICONS.get(self._key, "mdi:information")
 
     @property
     def extra_state_attributes(self):

@@ -1,10 +1,11 @@
 {
   "domain": "centauri_carbon",
   "name": "Elegoo Centauri Carbon",
-  "version": "0.1.0",
-  "documentation": "",
+  "version": "1.1.0",
+  "documentation": "https://github.com/terriblyvile/HA-Centauri-Carbon",
   "dependencies": [],
-  "codeowners": [],
-  "requirements": [],
-  "config_flow": true
+  "codeowners": ["viletheterrible"],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "requirements": []
 }

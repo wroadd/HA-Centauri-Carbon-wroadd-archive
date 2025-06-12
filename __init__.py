@@ -9,10 +9,9 @@ async def async_setup(hass: HomeAssistant, config: dict):
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     ws_client = CentauriWebSocketClient(hass, entry.data["ip"])
     hass.data[DOMAIN] = ws_client
-
-    # Run in background WITHOUT awaiting
     hass.loop.create_task(ws_client.connect())
 
-    # Load platforms
-    await hass.config_entries.async_forward_entry_setups(entry, ["sensor", "camera"])
+    await hass.config_entries.async_forward_entry_setups(
+        entry, ["sensor", "camera", "fan", "light", "number", "select"]
+    )
     return True
