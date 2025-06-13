@@ -1,13 +1,14 @@
 This is an integration into Home Assistant that will allow you to add sensors, controls, and the camera for the Elegoo Centauri Carbon into Home Assistant via your local network.
 I am selling my Centauri Carbon relatively soon so I will not be able to provide updates. Hopefully Elegoo doesn't break it!
 
+![image](https://github.com/user-attachments/assets/35b886d5-1a51-46b8-921e-33a7854503e6)
+
 # **Installation**
 
 1. Unzip the files
 2. Add the "centauri_carbon" folder to your custom components folder
 3. Restart Home Assistant
 4. Once restarted, add the integration as you normally would and input your local IP for the Centauri Carbon. The accepted format is 192.168.x.xxx. No slashes or http/https.
-
 
 # **Currently Supported Sensors:**
 
@@ -40,8 +41,6 @@ I am selling my Centauri Carbon relatively soon so I will not be able to provide
 - Print Speed
 - Target Bed Temperature
 - Target Nozzle Temperature
-
-![image](https://github.com/user-attachments/assets/35b886d5-1a51-46b8-921e-33a7854503e6)
 
 Here is an example entities card for what I use.
 
