@@ -1,5 +1,6 @@
+# **I have sold my Centauri Carbon, so I will not be able to make updates to this integration.**
+
 This is an integration into Home Assistant that will allow you to add sensors, controls, and the camera for the Elegoo Centauri Carbon into Home Assistant via your local network.
-I am selling my Centauri Carbon relatively soon so I will not be able to provide updates. Hopefully Elegoo doesn't break it!
 
 ![image](https://github.com/user-attachments/assets/35b886d5-1a51-46b8-921e-33a7854503e6)
 
