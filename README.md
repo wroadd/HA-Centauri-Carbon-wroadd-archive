@@ -1,4 +1,4 @@
-# **I have sold my Centauri Carbon, so I will not be able to make updates to this integration.**
+# **Archive for ECC HA custom component**
 
 This is an integration into Home Assistant that will allow you to add sensors, controls, and the camera for the Elegoo Centauri Carbon into Home Assistant via your local network.
 
