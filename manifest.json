@@ -1,10 +1,10 @@
 {
-  "domain": "centauri_carbon",
-  "name": "Elegoo Centauri Carbon",
-  "version": "1.1.0",
-  "documentation": "https://github.com/terriblyvile/HA-Centauri-Carbon",
+  "domain": "centauri_carbon_wroadd",
+  "name": "Elegoo Centauri Carbon - Wroadd Archive",
+  "version": "1.0.0",
+  "documentation": "https://github.com/wroadd/HA-Centauri-Carbon-wroadd-archive",
   "dependencies": [],
-  "codeowners": ["viletheterrible"],
+  "codeowners": ["wroadd"],
   "config_flow": true,
   "iot_class": "local_polling",
   "requirements": []
