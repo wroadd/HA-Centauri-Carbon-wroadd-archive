@@ -4,7 +4,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity import DeviceInfo
 from .const import DOMAIN
 
-CAMERA_NAME = "Centauri Camera"
+CAMERA_NAME = "Elegoo Centauri Carbon Camera"
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities):
     ip_address = entry.data["ip"]
