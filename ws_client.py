@@ -68,6 +68,8 @@ class CentauriWebSocketClient:
 
             if status_code in [1, 16, 21]:
                 printable_status = "Preparing"
+            elif status_code == 20:
+                printable_status = "Leveling"
             elif status_code == 13:
                 printable_status = "Printing"
             elif status_code == 9:
